@@ -27,7 +27,7 @@ module display_tb();
 
     // at start of test, load vectors and pulse reset
     initial begin
-        $readmemb("display_tb.tv", testvectors);
+        $readmemb("lab1_eo_tb.tv", testvectors);
 		$display("Loaded test vector 0: %b", testvectors[0]);
         vectornum = 0; errors = 0; reset = 1; #22; reset = 0;
     end
