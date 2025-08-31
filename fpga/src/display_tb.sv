@@ -2,7 +2,7 @@
 Author: Eoin O'Connell
 Email: eoconnell@hmc.edu
 Date: Aug. 31, 2025
-Module Function: Testbench to test top level module for E155 Lab 1.
+Module Function: Testbench to test seven segment dipslay module for E155 Lab 1.
 
 Note: Testbench modified from my testbench from E85 Lab 3.
 */

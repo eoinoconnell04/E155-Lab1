@@ -8,7 +8,7 @@ Note: Testbench modified from my testbench from E85 Lab 3.
 */
 
 
-module display_tb();
+module lab1_eo_tb();
     logic clk, reset;
     logic [3:0] s;
     logic [2:0] led;
