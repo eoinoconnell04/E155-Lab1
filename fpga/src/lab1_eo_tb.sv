@@ -41,9 +41,9 @@ module lab1_eo_tb();
     // check results on falling edge of clk
     always @(negedge clk)
         if (~reset) begin // skip during reset
-            if ({seg, led[1:0]} !== expected) begin // check result
+            if ({led[1:0], seg} !== expected) begin // check result
                 $display("Error: input = %b", s);
-                $display(" output = seg: %b, s:%b (%b expected)", seg, s[1:0], expected);
+                $display(" output = seg: %b, s:%b (%b expected)", s[1:0], seg, expected);
                 errors = errors + 1;
             end
             vectornum = vectornum + 1;
