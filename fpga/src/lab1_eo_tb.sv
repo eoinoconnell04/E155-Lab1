@@ -15,7 +15,7 @@ module lab1_eo_tb();
     logic [6:0] seg;
     logic [8:0] expected;
     logic [31:0] vectornum, errors;
-    logic [12:0] testvectors[10000:0];  // 4 input bits + 7 expected output bits
+    logic [12:0] testvectors[10000:0];  // 4 input bits + 9 expected output bits
 
     // instantiate device under test
     lab1_eo dut(s, seg, led);
@@ -47,7 +47,7 @@ module lab1_eo_tb();
                 errors = errors + 1;
             end
             vectornum = vectornum + 1;
-            if (testvectors[vectornum] === 14'bx) begin
+            if (testvectors[vectornum] === 13'bx) begin
                 $display("%d tests completed with %d errors", vectornum, errors);
                 $stop;
             end
