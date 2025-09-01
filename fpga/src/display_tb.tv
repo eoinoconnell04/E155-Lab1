@@ -1,3 +1,5 @@
+// Eoin O'Connell, 8/31/2025, eoconnell@g.hmc.edu
+// Test vectors for seven segement display module
 // s_seg
 0000_1000000 // 0
 0001_1111001 // 1
