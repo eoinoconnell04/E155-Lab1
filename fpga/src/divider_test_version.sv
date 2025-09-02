@@ -6,7 +6,7 @@ Module Function: Version of divider.sv that resets at a lower count to that it i
 Instead of counting to 10,000,000, this version counts to 10 and resets.
 */
 module divider_test_version(
-    input logic clk,
+    input logic clk, reset,
     output logic divided_clk
 );
 
@@ -16,15 +16,17 @@ module divider_test_version(
     // Toggle every 10 cycles (reset at count 9)
     localparam TOGGLE_COUNT = 4'd9;
 
-    // Initialize divided clock
-    initial divided_clk = 0;
-
     // Clock Divider
     always_ff @(posedge clk) begin
-        if (counter == TOGGLE_COUNT) begin
+        if (reset) begin
+            counter     <= 0;
+            divided_clk <= 0;
+        end 
+        else if (counter == TOGGLE_COUNT) begin
             divided_clk <= ~divided_clk;
             counter     <= 0;
-        end else begin
+        end 
+        else begin
             counter <= counter + 1;
         end
     end

@@ -14,7 +14,7 @@ module divider_test_version_tb();
     logic testvectors[10000:0];
 
     // instantiate device under test
-    divider_test_version dut(clk, divided_clk);
+    divider_test_version dut(clk, reset, divided_clk);
 
     // generate clock
     always begin
