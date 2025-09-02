@@ -11,7 +11,7 @@ module divider(
     output logic divided_clk
 );
 
-    logic [23:0] counter = 0;  // Should there be a dedicated reset?
+    logic [23:0] counter = 0;
 
     // Toggle every 10,000,000 cycles (need to check 1 cycle early to account for reset being 0 not 1)
     localparam TOGGLE_COUNT = 24'd9_999_999; 
